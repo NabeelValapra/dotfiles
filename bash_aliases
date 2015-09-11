@@ -17,14 +17,14 @@ dev(){
         Penv='MunawarDjango';
     fi
 
-
-    PROMPT_COMMAND='PS1X=$(p="${PWD#${HOME}}"; [ "${PWD}" != "${p}" ] && printf "~";IFS=/; for q in ${p:1}; do printf /${q:0:1}; done; printf "${q:1}")'
-    PS1='\[\033[0;33m\]<\[\033[00m\]\[\033[0;32m\]\u\[\033[0;33m\]>\[\033[00m\]\[\033[0;36m\]${PS1X}\[\033[0;33m\]$>\[\033[00m\] '
-
-
     cd ~/$dir
     workon $Penv
-    
+
+    ## ============================================================== #
+    ## To load .bash_prompt.
+    [ -n "$PS1" ] && source ~/.bash_prompt; 
+     
+   
     alias r='python manage.py runserver'
     alias migrate='python manage.py migrate'
     alias m='python manage.py'

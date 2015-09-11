@@ -212,3 +212,5 @@ endif
 if !isdirectory(&undodir)
     call mkdir(&undodir, "p")
 endif
+
+map <S-F11> :!ctags -R -f ./.tags $VIRTUAL_ENV/lib/python2.7/site-packages<CR>

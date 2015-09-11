@@ -121,7 +121,8 @@ export LANGUAGE=en_US.UTF-8
 export WORKON_HOME=/home/nabeel/VirtualENVs
 source /usr/local/bin/virtualenvwrapper.sh
 
-
 # ============================================================== #
 ## For Python3
 alias py3="/opt/python3.4.3/bin/python3.4"
+
+
