@@ -17,8 +17,7 @@ set shiftwidth=4
 " tab length exceptions on some file types
 autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType htmldjango setlocal shiftwidth=2 tabstop=2 softtabstop=2
-autocmd FileType javascript setlocal shiftwidth=2 tabstop=2 softtabstop=2
-
+autocmd FileType javascript setlocal shiftwidth=2 tabstop=2 softtabstop=2 
 
 " Tab navigation mappings
 map tn :tab<CR>
@@ -213,4 +212,6 @@ if !isdirectory(&undodir)
     call mkdir(&undodir, "p")
 endif
 
+" Ctags
 map <S-F11> :!ctags -R -f ./.tags $VIRTUAL_ENV/lib/python2.7/site-packages<CR>
+

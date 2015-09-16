@@ -8,7 +8,7 @@
 
 dir=~/.dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
-files="vimrc vim bashrc bash_aliases bash_prompt font.conf fontconfig fonts"    # list of files/folders to symlink in homedir
+files="vimrc bashrc bash_aliases bash_prompt zshrc oh-my-zsh/themes/agnoster.zsh-theme"    # list of files/folders to symlink in homedir
 
 ##########
 

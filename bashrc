@@ -90,10 +90,6 @@ alias la='ls -A'
 alias l='ls -CF'
 
 # Alias definitions.
-# You may want to put all your additions into a separate file like
-# ~/.bash_aliases, instead of adding them here directly.
-# See /usr/share/doc/bash-doc/examples in the bash-doc package.
-
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
@@ -110,13 +106,6 @@ if ! shopt -oq posix; then
 fi
 
 # ============================================================== #
-## Locale variables..
-export LC_ALL=en_US.UTF-8
-export LANG=en_US.UTF-8
-export LANGUAGE=en_US.UTF-8
-
-# ============================================================== #
-
 ## For VIRTUALENVWRAPPER ##
 export WORKON_HOME=/home/nabeel/VirtualENVs
 source /usr/local/bin/virtualenvwrapper.sh
@@ -124,5 +113,3 @@ source /usr/local/bin/virtualenvwrapper.sh
 # ============================================================== #
 ## For Python3
 alias py3="/opt/python3.4.3/bin/python3.4"
-
-
