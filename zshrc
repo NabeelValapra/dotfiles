@@ -1,11 +1,11 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/home/nabeel/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="agnoster"
+ZSH_THEME="custom_agnoster"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -82,3 +82,12 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+#
+
+# For VIRTUALENVWRAPPER #
+export WORKON_HOME=/home/nabeel/VirtualENVs
+source /usr/local/bin/virtualenvwrapper.sh
+
+# Aliases #
+source $HOME/.aliases.zsh
+

@@ -46,8 +46,11 @@ Bundle 'gmarik/vundle'
 Bundle 'scrooloose/nerdtree'
 Bundle 'Xuyuanp/nerdtree-git-plugin'
 "
+" Class/module browser
+Bundle 'majutsushi/tagbar'
+"
 " PowerLine
-Bundle 'Lokaltog/vim-powerline'
+ Bundle 'Lokaltog/vim-powerline'
 "
 " Airline
 Bundle 'bling/vim-airline'
@@ -91,23 +94,26 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 
 " 256 colors scheme when possible -------------------
 if &term =~? 'mlterm\|xterm\|xterm-256\|screen-256'
-let &t_Co = 256
-colorscheme fisa
+    let &t_Co = 256
+    colorscheme fisa
 else
-colorscheme delek
+    colorscheme delek
 endif
+"
+" Tagbar Toggle
+nmap <F8> :TagbarToggle<CR>
 "
 " PowerLine Setup -------------------
 let g:Powerline_symbols = 'fancy'
 set laststatus=2
 "
 " Airline ------------------------------
-let g:airline_powerline_fonts = 0
+" Use font patcher if needed from: https://github.com/fisadev/fisa-vim-config
+" the instructions is given in Readme.md.
+let g:airline_powerline_fonts = 1
 let g:airline_theme = 'bubblegum'
 let g:airline#extensions#whitespace#enabled = 0
 
-" to use fancy symbols for airline, uncomment the following lines and use a
-" patched font (more info on the README.rst)
 if !exists('g:airline_symbols')
  let g:airline_symbols = {}
 endif

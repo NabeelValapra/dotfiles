@@ -8,9 +8,11 @@
 
 dir=~/.dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
-files="vimrc bashrc bash_aliases bash_prompt zshrc oh-my-zsh/themes/agnoster.zsh-theme"    # list of files/folders to symlink in homedir
+# list of files/folders to symlink in homedir
+files="vimrc bashrc bash_aliases bash_prompt zshrc oh-my-zsh/custom/themes/custom_agnoster.zsh-theme config/terminator/config "
 
 ##########
+
 
 # create dotfiles_old in homedir
 echo "Creating $olddir for backup of any existing dotfiles in ~"

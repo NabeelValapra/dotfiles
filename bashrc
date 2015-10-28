@@ -106,10 +106,17 @@ if ! shopt -oq posix; then
 fi
 
 # ============================================================== #
-## For VIRTUALENVWRAPPER ##
+## Locale variables ##
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LANGUAGE=en_US.UTF-8
+
+# ============================================================== #
+## For VirtualEnvWrapper ##
 export WORKON_HOME=/home/nabeel/VirtualENVs
 source /usr/local/bin/virtualenvwrapper.sh
 
 # ============================================================== #
-## For Python3
-alias py3="/opt/python3.4.3/bin/python3.4"
+## Temp Patch to cd to ~ ##
+cd ~
+
