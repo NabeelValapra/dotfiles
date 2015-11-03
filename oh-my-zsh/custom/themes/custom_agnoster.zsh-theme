@@ -184,3 +184,4 @@ build_prompt() {
 
 PROMPT='%{%f%b%k%}$(build_prompt)
 ❯ '
+RPROMPT='%{$fg[green]%}[%*]%{$reset_color%}'
