@@ -1,0 +1,30 @@
+pane	Brandy	0	:~	0	:-	0	:/home/nabeel	1	zsh	:
+pane	Brandy	1	:BrandyVim	1	:*	0	:/home/nabeel/Django/Brandy	1	vim	:vim
+pane	Brandy	2	:BrandyControls	0	: 	0	:/home/nabeel/Django/Brandy	0	zsh	:
+pane	Brandy	2	:BrandyControls	0	: 	1	:/home/nabeel/Django/Brandy	0	zsh	:
+pane	Brandy	2	:BrandyControls	0	: 	2	:/home/nabeel/RubbishBin	0	zsh	:
+pane	Brandy	2	:BrandyControls	0	: 	3	:/home/nabeel/Django/Brandy	0	zsh	:
+pane	Brandy	2	:BrandyControls	0	: 	4	:/home/nabeel/Django/Brandy	1	zsh	:
+pane	Brandy	3	:Other	0	: 	0	:/home/nabeel	1	zsh	:
+pane	Brandy	3	:Other	0	: 	1	:/home/nabeel	0	zsh	:
+pane	Brandy	4	:Other	0	: 	0	:/home/nabeel	1	zsh	:
+pane	Brandy	5	:Other	0	: 	0	:/home/nabeel	1	zsh	:
+pane	Brandy	6	:Other	0	: 	0	:/home/nabeel	1	zsh	:
+pane	Brandy	7	:Other	0	: 	0	:/home/nabeel	1	zsh	:
+pane	Brandy	8	:Other	0	: 	0	:/home/nabeel	1	zsh	:
+pane	Brandy	9	:Other	0	: 	0	:/home/nabeel	1	zsh	:
+pane	Brandy	10	:Other	0	: 	0	:/home/nabeel	1	zsh	:
+pane	Brandy	11	:HTop	0	: 	0	:/home/nabeel	1	htop	:htop
+window	Brandy	0	0	:-	d851,170x41,0,0,22
+window	Brandy	1	1	:*	b03e,170x41,0,0,1
+window	Brandy	2	0	: 	8ac0,170x41,0,0{85x41,0,0[85x20,0,0,2,85x20,0,21,6],84x41,86,0[84x10,86,0,3,84x9,86,11,5,84x20,86,21,4]}
+window	Brandy	3	0	: 	05d3,170x41,0,0{85x41,0,0,7,84x41,86,0,8}
+window	Brandy	4	0	: 	5852,170x41,0,0,13
+window	Brandy	5	0	: 	5853,170x41,0,0,14
+window	Brandy	6	0	: 	5854,170x41,0,0,15
+window	Brandy	7	0	: 	5855,170x41,0,0,16
+window	Brandy	8	0	: 	5856,170x41,0,0,17
+window	Brandy	9	0	: 	5858,170x41,0,0,19
+window	Brandy	10	0	: 	d84f,170x41,0,0,20
+window	Brandy	11	0	: 	5851,170x41,0,0,12
+state	Brandy	

@@ -18,7 +18,6 @@ set shiftwidth=4
 autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType htmldjango setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2 softtabstop=2 
-
 " Tab navigation mappings
 map tn :tab<CR>
 map tp :tabp<CR>
