@@ -1,7 +1,3 @@
-set nocompatible
-
-filetype off
-
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#rc()
 
@@ -13,6 +9,10 @@ set expandtab
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
+set nocompatible
+set encoding=utf-8
+set fileencoding=utf-8
+filetype off
 
 " tab length exceptions on some file types
 autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2
@@ -31,9 +31,9 @@ imap <C-S-Left> <ESC>:tabp<CR>
 
 " Altrenative to <ESC>
 imap jk <ESC>
-map ;; <C-W>w
-map ;k :tabn<CR>
-map ;j :tabp<CR>
+map <C-G> <C-W>w
+map gt :tabn<CR>
+map tg :tabp<CR>
 
 " let Vundle manage Vundle
 " required! 
@@ -41,15 +41,15 @@ Bundle 'gmarik/vundle'
 
 " The bundles you install will be listed here
 "
+" PowerLine
+Bundle 'Lokaltog/powerline'
+"
 " Nerd Tree
 Bundle 'scrooloose/nerdtree'
 Bundle 'Xuyuanp/nerdtree-git-plugin'
 "
 " Class/module browser
 Bundle 'majutsushi/tagbar'
-"
-" PowerLine
- Bundle 'Lokaltog/vim-powerline'
 "
 " Airline
 Bundle 'bling/vim-airline'
@@ -80,12 +80,15 @@ Bundle 'YankRing.vim'
 "
 " Rust Plugin
 Plugin 'rust-lang/rust.vim'
+"
+" Elixir Plugin
+Plugin 'elixir-lang/vim-elixir'
 
 
 filetype plugin indent on
 
 " The rest of your config follows here
-" " Nerd Tree setup --------------------------------
+" Nerd Tree setup --------------------------------
 autocmd vimenter * NERDTree
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
@@ -114,37 +117,42 @@ let g:airline_theme = 'bubblegum'
 let g:airline#extensions#whitespace#enabled = 0
 
 if !exists('g:airline_symbols')
- let g:airline_symbols = {}
+    let g:airline_symbols = {}
 endif
-let g:airline_left_sep = '⮀'
-let g:airline_left_alt_sep = '⮁'
-let g:airline_right_sep = '⮂'
-let g:airline_right_alt_sep = '⮃'
-let g:airline_symbols.branch = '⭠'
-let g:airline_symbols.readonly = '⭤'
-let g:airline_symbols.linenr = '⭡'
+"
+" airline symbols
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+let g:airline_symbols.branch = ''
+let g:airline_symbols.readonly = ''
+let g:airline_symbols.linenr = ''
 
 
 " Syntastic ------------------------------
 " show list of errors and warnings on the current file
-nmap <leader>e :Errors<CR>
+" nmap <leader>e :Errors<CR>
 " check also when just opened the file
-let g:syntastic_check_on_open = 1
+" let g:syntastic_check_on_open = 1
 " don't put icons on the sign column (it hides the vcs status icons of
 " signify)
-let g:syntastic_enable_signs = 0
+" let g:syntastic_enable_signs = 0
 " custom icons (enable them if you use a patched font, and enable the
 " previous
 " setting)
-"let g:syntastic_error_symbol = '✗'
-"let g:syntastic_warning_symbol = '⚠'
-"let g:syntastic_style_error_symbol = '✗'
-"let g:syntastic_style_warning_symbol = '⚠'
+" let g:syntastic_error_symbol = '✗'
+" let g:syntastic_warning_symbol = '⚠'
+" let g:syntastic_style_error_symbol = '✗'
+" let g:syntastic_style_warning_symbol = '⚠'
 
 " Python-mode ------------------------------
 " don't use linter, we use syntastic for that
-let g:pymode_lint_on_write = 0
+let g:pymode_lint = 1
+let g:pymode_lint_on_write = 1
 let g:pymode_lint_signs = 0
+let g:pymode_lint_message = 1
+let g:pymode_lint_checkers = ['pyflakes', 'pep8']
 " don't fold python code on open
 let g:pymode_folding = 0
 " don't load rope by default. Change to 1 to use rope
@@ -219,4 +227,6 @@ endif
 
 " Ctags
 map <S-F11> :!ctags -R -f ./.tags $VIRTUAL_ENV/lib/python2.7/site-packages<CR>
-
+let Tlist_Ctags_Cmd = "/usr/bin/ctags"
+let Tlist_WinWidth = 50
+map <F4> :TlistToggle<cr>

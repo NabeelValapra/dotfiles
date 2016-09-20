@@ -107,16 +107,34 @@ fi
 
 # ============================================================== #
 ## Locale variables ##
+# export LC_ALL=en_US.UTF-8
+# export LANG=en_US.UTF-8
+# export LANGUAGE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
-export LANGUAGE=en_US.UTF-8
+
+# export LANG="en_US.UTF-8"
+# export LC_COLLATE="en_US.UTF-8"
+# export LC_CTYPE="en_US.UTF-8"
+# export LC_MESSAGES="en_US.UTF-8"
+# export LC_MONETARY="en_US.UTF-8"
+# export LC_NUMERIC="en_US.UTF-8"
+# export LC_TIME="en_US.UTF-8"
+# export LC_ALL="en_US.UTF-8"
 
 # ============================================================== #
 ## For VirtualEnvWrapper ##
-export WORKON_HOME=/home/nabeel/VirtualENVs
+export WORKON_HOME=/home/nabeel/.VirtualENVs
 source /usr/local/bin/virtualenvwrapper.sh
 
 # ============================================================== #
 ## Temp Patch to cd to ~ ##
 cd ~
 
+source ~/.rvm/scripts/rvm
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
+
+# added by Anaconda2 2.5.0 installer
+export PATH="/home/nabeel/anaconda2/bin:$PATH"

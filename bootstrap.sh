@@ -9,7 +9,7 @@
 dir=~/.dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
 # list of files/folders to symlink in homedir
-files="vimrc bashrc bash_aliases bash_prompt zshrc oh-my-zsh/custom/themes/custom_agnoster.zsh-theme config/terminator/config "
+files="vimrc bashrc bash_aliases bash_prompt zshrc tmux.conf oh-my-zsh/custom/themes/custom_agnoster.zsh-theme config/terminator/config "
 
 ##########
 
