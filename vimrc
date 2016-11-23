@@ -44,10 +44,6 @@ Bundle 'gmarik/vundle'
 " PowerLine
 Bundle 'Lokaltog/powerline'
 "
-" Nerd Tree
-Bundle 'scrooloose/nerdtree'
-Bundle 'Xuyuanp/nerdtree-git-plugin'
-"
 " Class/module browser
 Bundle 'majutsushi/tagbar'
 "
@@ -87,12 +83,6 @@ Plugin 'elixir-lang/vim-elixir'
 
 filetype plugin indent on
 
-" The rest of your config follows here
-" Nerd Tree setup --------------------------------
-autocmd vimenter * NERDTree
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 " 256 colors scheme when possible -------------------
 if &term =~? 'mlterm\|xterm\|xterm-256\|screen-256'
@@ -164,14 +154,6 @@ let g:pymode_rope_goto_definition_cmd = 'e'
 nmap ,D :tab split<CR>:PymodePython rope.goto()<CR>
 nmap ,o :RopeFindOccurrences<CR>
 
-" NERDTree -----------------------------
-" toggle nerdtree display
-map <F3> :NERDTreeToggle<CR>
-" open nerdtree with the current file selected
-nmap ,t :NERDTreeFind<CR>
-" don;t show these file types
-let NERDTreeIgnore = ['\.pyc$', '\.pyo$']
-
 " NeoComplete -----------------------
 let g:neocomplcache_enable_at_startup = 1
 let g:neocomplcache_enable_ignore_case = 1
@@ -230,3 +212,6 @@ map <S-F11> :!ctags -R -f ./.tags $VIRTUAL_ENV/lib/python2.7/site-packages<CR>
 let Tlist_Ctags_Cmd = "/usr/bin/ctags"
 let Tlist_WinWidth = 50
 map <F4> :TlistToggle<cr>
+
+" Ctrl.P Fuzzysearch
+set runtimepath^=~/.vim/bundle/ctrlp.vim
