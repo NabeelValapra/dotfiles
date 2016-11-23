@@ -47,8 +47,13 @@ Bundle 'Lokaltog/powerline'
 " Class/module browser
 Bundle 'majutsushi/tagbar'
 "
+" Nerd Tree
+Bundle 'scrooloose/nerdtree'
+Bundle 'Xuyuanp/nerdtree-git-plugin'
+"
 " Airline
 Bundle 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 "
 " Terminal Vim with 256 colors colorscheme
 Bundle 'fisadev/fisa-vim-colorscheme'
@@ -80,9 +85,15 @@ Plugin 'rust-lang/rust.vim'
 " Elixir Plugin
 Plugin 'elixir-lang/vim-elixir'
 
+" Ctrl.P Fuzzysearch
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+let g:ctrlp_map = '<c-f>'
+let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
+
 
 filetype plugin indent on
-
 
 " 256 colors scheme when possible -------------------
 if &term =~? 'mlterm\|xterm\|xterm-256\|screen-256'
@@ -98,6 +109,14 @@ nmap <F8> :TagbarToggle<CR>
 " PowerLine Setup -------------------
 let g:Powerline_symbols = 'fancy'
 set laststatus=2
+"
+" NERDTree -----------------------------
+" toggle nerdtree display
+map <F3> :NERDTreeToggle<CR>
+" open nerdtree with the current file selected
+nmap ,t :NERDTreeFind<CR>
+" don't show these file types
+let NERDTreeIgnore = ['\.pyc$', '\.pyo$']              
 "
 " Airline ------------------------------
 " Use font patcher if needed from: https://github.com/fisadev/fisa-vim-config
@@ -212,6 +231,3 @@ map <S-F11> :!ctags -R -f ./.tags $VIRTUAL_ENV/lib/python2.7/site-packages<CR>
 let Tlist_Ctags_Cmd = "/usr/bin/ctags"
 let Tlist_WinWidth = 50
 map <F4> :TlistToggle<cr>
-
-" Ctrl.P Fuzzysearch
-set runtimepath^=~/.vim/bundle/ctrlp.vim
